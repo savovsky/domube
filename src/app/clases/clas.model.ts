@@ -1,11 +1,11 @@
 
-export interface Class {
+export interface Clas {
     id: string;
     title: string;
     imageUrl: string;
 }
 
-export class Class {
+export class Clas {
     constructor(
       public id = '',
       public title = '',

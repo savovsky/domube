@@ -1,16 +1,16 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Classes</ion-title>
+    <ion-title>Clases</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let class of classes">
+    <ion-item *ngFor="let clas of clases">
       <ion-avatar slot="start">
-        <ion-img [src]="class.imageUrl"></ion-img>
+        <ion-img [src]="clas.imageUrl"></ion-img>
       </ion-avatar>
-      <ion-label>{{ class.title }}</ion-label>
+      <ion-label>{{ clas.title }}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

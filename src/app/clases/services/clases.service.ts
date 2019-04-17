@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Class } from '../class.model';
+import { Clas } from '../clas.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ClassesService {
+export class ClasesService {
 
-  private classes: Class[] = [
+  private clases: Clas[] = [
     {
       id: 'math',
       title: 'Math',
@@ -21,13 +21,13 @@ export class ClassesService {
 
   constructor() { }
 
-  getAllClasses() {
-    return [...this.classes];
+  getAllClases() {
+    return [...this.clases];
   }
 
-  getClass(classId: string) {
+  getClas(clasId: string) {
     return {
-      ...this.classes.find(el => el.id === classId)
+      ...this.clases.find(el => el.id === clasId)
     };
   }
 }
