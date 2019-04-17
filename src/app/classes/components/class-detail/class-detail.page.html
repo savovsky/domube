@@ -1,9 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>class-detail</ion-title>
+    <ion-title>{{ loadedClass.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col no-padding>
+        <ion-img [src]="loadedClass.imageUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 text-center>{{ loadedClass.title }}</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

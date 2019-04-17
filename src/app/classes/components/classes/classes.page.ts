@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClassesService } from '../../services/classes.service';
 import { Class } from '../../class.model';
 
 @Component({
@@ -7,22 +8,13 @@ import { Class } from '../../class.model';
   styleUrls: ['./classes.page.scss'],
 })
 export class ClassesPage implements OnInit {
-  classes: Class[] = [
-    {
-      id: 'math',
-      title: 'Math',
-      imageUrl: '../../assets/images/pic.jpg'
-    },
-    {
-      id: 'bel',
-      title: 'BEL',
-      imageUrl: '../../assets/images/pic.jpg'
-    }
-  ];
 
-  constructor() { }
+  classes: Class[];
+
+  constructor(private classesService: ClassesService) { }
 
   ngOnInit() {
+    this.classes = this.classesService.getAllClasses();
   }
 
 }
