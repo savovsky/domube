@@ -5,9 +5,17 @@ const routes: Routes = [
   { path: '', redirectTo: 'classes', pathMatch: 'full' },
   {
     path: 'classes',
-    loadChildren: './classes/classes.module#ClassesPageModule'
-  },
-  { path: 'class-detail', loadChildren: './classes/class-detail/class-detail.module#ClassDetailPageModule' }
+    children: [
+      {
+        path: '',
+        loadChildren: './classes/classes.module#ClassesPageModule'
+      },
+      {
+        path: ':classId',
+        loadChildren: './classes/class-detail/class-detail.module#ClassDetailPageModule'
+      }
+    ]
+  }
 ];
 
 @NgModule({

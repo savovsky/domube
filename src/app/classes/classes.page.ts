@@ -9,12 +9,12 @@ import { Class } from './classes.model';
 export class ClassesPage implements OnInit {
   classes: Class[] = [
     {
-      id: '1',
+      id: 'math',
       title: 'Math',
       imageUrl: '../../assets/images/pic.jpg'
     },
     {
-      id: '2',
+      id: 'bel',
       title: 'BEL',
       imageUrl: '../../assets/images/pic.jpg'
     }
