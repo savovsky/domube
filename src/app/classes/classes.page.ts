@@ -18,7 +18,7 @@ export class ClassesPage implements OnInit {
       title: 'BEL',
       imageUrl: '../../assets/images/pic.jpg'
     }
-  ]
+  ];
 
   constructor() { }
 
