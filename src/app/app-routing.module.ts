@@ -2,20 +2,12 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'clases', pathMatch: 'full' },
-  {
-    path: 'classes',
-    children: [
-      {
-        path: '',
-        loadChildren: './clases/components/clases/clases.module#ClasesPageModule'
-      },
-      {
-        path: ':clasId',
-        loadChildren: './clases/components/clas-detail/clas-detail.module#ClasDetailPageModule'
-      }
-    ]
-  }
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
+  { path: 'properties', loadChildren: './properties/properties.module#PropertiesPageModule' },
+  { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardPageModule' },
+  { path: 'auth', loadChildren: './auth/auth.module#AuthPageModule' },
+  // { path: 'signin', loadChildren: './auth/signin/signin.module#SigninPageModule' },
+  // { path: 'signup', loadChildren: './auth/signup/signup.module#SignupPageModule' }
 ];
 
 @NgModule({
